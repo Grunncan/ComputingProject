@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.generateController">
+
+    <top>
+        <VBox alignment="CENTER" spacing="10">
+            <Label text="Sudoku Generator" />
+            <HBox alignment="CENTER" minHeight="70" minWidth="650" spacing="180">
+                <VBox alignment="CENTER">
+                    <Button fx:id="buttonGenerate" minWidth="60" onAction="#onOptionButtonClick" style="-fx-background-color: transparent;" text="Generate" />
+                    <Rectangle fx:id="rectangleGenerate" fill="white" height="5.0" stroke="grey" width="60.0" />
+                </VBox>
+                <VBox alignment="CENTER">
+                    <Button fx:id="buttonSelect" minWidth="60" onAction="#onOptionButtonClick" style="-fx-background-color: transparent;" text="Select" />
+                    <Rectangle fx:id="rectangleSelect" fill="black" height="5.0" stroke="grey" width="60.0" />
+                </VBox>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" maxWidth="649.0" minHeight="300" prefHeight="441.0" prefWidth="649.0" spacing="10" style="-fx-border-color: black">
+            <padding><Insets bottom="25" left="25" right="25" top="25" /></padding>
+            <BorderPane fx:id="gridpane" maxWidth="600" minHeight="300">
+                <Line endX="256" endY="268" startX="256" startY="27" strokeWidth="2" />
+                <Line endX="331" endY="268" startX="331" startY="27" strokeWidth="2" />
+
+                <Line endX="404" endY="107" startX="181" startY="107" strokeWidth="2" />
+                <Line endX="404" endY="188" startX="181" startY="188" strokeWidth="2" />
+
+
+                <center>
+                    <VBox fx:id="vBox" alignment="CENTER">
+                        <padding><Insets bottom="25" left="180" right="25" top="20" /></padding>
+                        <HBox fx:id="hbox1">
+
+                        </HBox>
+
+                        <HBox fx:id="hbox2">
+
+                        </HBox>
+
+                        <HBox fx:id="hbox3">
+
+                        </HBox>
+
+                        <HBox fx:id="hbox4">
+
+                        </HBox>
+
+                        <HBox fx:id="hbox5">
+
+                        </HBox>
+
+                        <HBox fx:id="hbox6">
+
+                        </HBox>
+
+                        <HBox fx:id="hbox7">
+
+                        </HBox>
+
+                        <HBox fx:id="hbox8">
+
+                        </HBox>
+
+                        <HBox fx:id="hbox9">
+
+                        </HBox>
+
+                    </VBox>
+
+
+
+                </center>
+            </BorderPane>
+
+            <Label fx:id="diffLabel" text="Difficulty:" />
+            <Label fx:id="dateLabel" text="Date created:" />
+            <Button fx:id="printButton" onAction="#onPrintButtonCLick" text="Print" />
+
+        </VBox>
+    </center>
+
+
+    <left>
+        <VBox alignment="CENTER" minHeight="400" minWidth="0.0" prefHeight="441.0" prefWidth="0.0" style="-fx-border-color: black">
+
+            
+        </VBox>
+
+    </left>
+
+    <right>
+        <VBox minHeight="400" minWidth="25">
+
+        </VBox>
+
+    </right>
+
+</BorderPane>
